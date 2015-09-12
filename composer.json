@@ -1,0 +1,26 @@
+{
+	"name": "ondrejd/DateTimeExtended",
+	"description": "Rozšíření standartní PHP třídy DateTime pro snadné zjišťování nejbližšího pracovního dne.",
+	"homepage": "https://github.com/ondrejd/DateTimeExtended",
+	"type": "library",
+	"license": "MPL-2.0",
+	"keywords": ["library"],
+	"authors": [
+		{
+			"name": "Ondřej Doněk",
+			"email": "donek.ebrana@gmail.com",
+			"role": "Developer"
+		}
+	],
+	"repositories": [{
+		"type": "vcs",
+		"url": "https://github.com/ondrejd/DateTimeExtended"
+	}],
+	"minimum-stability": "stable",
+	"autoload": {
+		"classmap": ["src/"]
+	},
+	"require": {
+		"php": ">=5.2"
+	}
+}

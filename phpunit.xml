@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.2/phpunit.xsd"
+		 bootstrap="test/bootstrap.php" 
+		 convertErrorsToExceptions="false"
+		 convertWarningsToExceptions="false"
+		 convertNoticesToExceptions="false"
+         colors="true">
+	<testsuites>
+		<testsuite name="DateTimeExtended Tests Tests">
+			<directory>test/src</directory>
+		</testsuite>
+	</testsuites>
+</phpunit>
