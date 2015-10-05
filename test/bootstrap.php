@@ -2,7 +2,7 @@
 /**
  * DateTimeExtended
  *
- * @author Ondrej Donek, <ondrej.donek@ebrana.cz>
+ * @author Ondrej Donek, <ondrejd@gmail.com>
  * @license https://www.mozilla.org/MPL/2.0/ name
  */
 
