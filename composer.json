@@ -1,5 +1,5 @@
 {
-	"name": "ondrejd/DateTimeExtended",
+	"name": "ondrejd/datetimeextended",
 	"description": "Rozšíření standartní PHP třídy DateTime pro snadné zjišťování nejbližšího pracovního dne.",
 	"homepage": "https://github.com/ondrejd/DateTimeExtended",
 	"type": "library",
