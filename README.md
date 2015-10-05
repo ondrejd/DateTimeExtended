@@ -39,3 +39,4 @@ $helper = new DateTimeExtended();
 echo $helper->getNextWorkingDay()->format('Y-m-d H:i:s');
 
 ```
+
