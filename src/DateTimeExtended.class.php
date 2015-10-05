@@ -89,11 +89,11 @@ class DateTimeExtended extends DateTime
 	 */
 	public static function getCzechBankHolidays()
 	{
-		// TODO Pokud je `$date` mensi nez 10. února 2004, tak "Den vizestvi"
-		//      je "Den osvobozeni".
+		// TODO Pokud je `$date` mensi nez 10. února 2004, tak "Den vítězství"
+		//      je "Den osvobození".
 		return array(
 			'01-01' => 'Den obnovy samostatného českého státu',
-			'05-08' => 'Den vízěství',
+			'05-08' => 'Den vítězství',
 			'07-05' => 'Den slovanských věrozvěstů Cyrila a Metoděje',
 			'07-06' => 'Den upálení mistra Jana Husa',
 			'09-28' => 'Den české státnosti',
