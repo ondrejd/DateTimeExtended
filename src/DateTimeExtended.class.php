@@ -14,6 +14,7 @@
  */
 class DateTimeExtended extends DateTime
 {
+
 	/**
 	 * Constructor.
 	 * 
@@ -34,15 +35,15 @@ class DateTimeExtended extends DateTime
 	 */
 	public function isWorkingDay()
 	{
-		$time = strtotime($this->date);
+		//$time = strtotime($this->date);
 
-		if (in_array(date('D', $time), array('Sat', 'Sun'))) {
+		if (in_array(date('D', $this->getTimestamp()), array('Sat', 'Sun'))) {
 			return false;
 		}
 
 		$holidays = array_keys($this->getCzechAllHolidays());
 
-		if (in_array(date('m-d', $time), $holidays)) {
+		if (in_array(date('m-d', $this->getTimestamp()), $holidays)) {
 			return false;
 		}
 
@@ -109,7 +110,7 @@ class DateTimeExtended extends DateTime
 	 */
 	public function getCzechPublicHolidays()
 	{
-		$year = date('Y', strtotime($this->date));
+		$year = date('Y', $this->getTimestamp());
 		$base = new DateTime(date('Y-m-d', easter_date($year)));
 		$base->add(new DateInterval('P1D'));
 		$easter = $base->format('m-d');
