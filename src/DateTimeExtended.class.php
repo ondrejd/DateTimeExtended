@@ -40,7 +40,7 @@ class DateTimeExtended extends DateTime
 			return false;
 		}
 
-		$holidays = array_keys(self::getCzechAllHolidays());
+		$holidays = array_keys($this->getCzechAllHolidays());
 
 		if (in_array(date('m-d', $time), $holidays)) {
 			return false;
@@ -72,11 +72,11 @@ class DateTimeExtended extends DateTime
 	 * @link http://www.mpsv.cz/cs/74
 	 * @return array
 	 */
-	public static function getCzechAllHolidays()
+	public function getCzechAllHolidays()
 	{
 		return array_merge(
-			self::getCzechBankHolidays(),
-			self::getCzechPublicHolidays()
+			$this->getCzechBankHolidays(),
+			$this->getCzechPublicHolidays()
 		);
 	}
 
@@ -86,7 +86,7 @@ class DateTimeExtended extends DateTime
 	 * @link http://www.mpsv.cz/cs/74
 	 * @return array
 	 */
-	public static function getCzechBankHolidays()
+	public function getCzechBankHolidays()
 	{
 		// TODO Pokud je `$date` mensi nez 10. února 2004, tak "Den vítězství"
 		//      je "Den osvobození".
@@ -107,9 +107,12 @@ class DateTimeExtended extends DateTime
 	 * @link http://www.mpsv.cz/cs/74
 	 * @return array
 	 */
-	public static function getCzechPublicHolidays()
+	public function getCzechPublicHolidays()
 	{
-		$easter = date('m-d', easter_date());
+		$year = date('Y', strtotime($this->date));
+		$base = new DateTime(date('Y-m-d', easter_date($year)));
+		$base->add(new DateInterval('P1D'));
+		$easter = $base->format('m-d');
 
 		return array(
 			'01-01' => 'Nový rok',
