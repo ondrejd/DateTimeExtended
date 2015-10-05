@@ -25,7 +25,6 @@ class DateTimeExtended extends DateTime
 	public function __construct($time = 'now', $timezone = null)
 	{
 		parent::__construct($time, $timezone);
-		//var_dump($this);exit();
 	}
 
 	/**
