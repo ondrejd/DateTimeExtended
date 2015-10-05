@@ -19,7 +19,7 @@ Buď můžete stáhnout zdrojové kódy přímo zde z repozitáře nebo použít
 ```json
 {
 	"require": {
-		"ondrejd/DateTimeExtended": "dev-master"
+		"ondrejd/datetimeextended": "dev-master"
 	}
 }
 ```
